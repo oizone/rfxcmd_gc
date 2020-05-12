@@ -14,8 +14,9 @@ LABEL maintainer="oizone@oizone.net"
 #RUN apt-get update
 #RUN apt-get install -y --no-install-recommends jq python3-ncclient ansible=2.7.7+dfsg-1
 RUN apt-get update
+RUN apt-get install -y python-minimal
 
 WORKDIR /rfxcmd
 COPY * /rfxcmd/
 
-ENTRYPOINT ["/bin/sh"]
+CMD ["/bin/sh"]
