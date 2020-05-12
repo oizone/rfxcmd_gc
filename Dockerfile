@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM debian:latest-slim
 LABEL maintainer="oizone@oizone.net"
 
 #ARG GH_RUNNER_VERSION="2.169.1"
@@ -13,7 +13,7 @@ LABEL maintainer="oizone@oizone.net"
 #RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 #RUN apt-get update
 #RUN apt-get install -y --no-install-recommends jq python3-ncclient ansible=2.7.7+dfsg-1
-RUN apk add --no-cache python2
+RUN RUN apt-get update
 
 WORKDIR /rfxcmd
 COPY * /rfxcmd
