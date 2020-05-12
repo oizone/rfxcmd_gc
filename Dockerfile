@@ -16,6 +16,6 @@ LABEL maintainer="oizone@oizone.net"
 RUN apt-get update
 
 WORKDIR /rfxcmd
-COPY * /rfxcmd
+COPY * /rfxcmd/
 
 ENTRYPOINT ["/bin/sh"]
