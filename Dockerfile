@@ -1,4 +1,4 @@
-FROM debian:latest-slim
+FROM ubuntu:latest
 LABEL maintainer="oizone@oizone.net"
 
 #ARG GH_RUNNER_VERSION="2.169.1"
