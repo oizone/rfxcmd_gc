@@ -17,7 +17,8 @@ RUN apt-get update
 RUN apt-get install -y python-minimal python-serial
 
 WORKDIR /rfxcmd
-COPY * /rfxcmd/
+COPY lib/* /rfxcmd/lib/
+COPY rfxcmd.py /rfxcmd/
 
 CMD ["/bin/sh"]
 #./rfxcmd.py -d /dev/ttyUSB0 -s "0D1A00200000010103A100000000" -v
