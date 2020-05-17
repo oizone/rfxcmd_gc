@@ -14,11 +14,11 @@ LABEL maintainer="oizone@oizone.net"
 #RUN apt-get update
 #RUN apt-get install -y --no-install-recommends jq python3-ncclient ansible=2.7.7+dfsg-1
 RUN apt-get update
-RUN apt-get install -y python-minimal python-serial
+RUN apt-get install -y python-minimal python-serial python3-flask python3-gunicorn
 
 WORKDIR /rfxcmd
 COPY lib/* /rfxcmd/lib/
-COPY rfxcmd.py /rfxcmd/
+COPY *.py /rfxcmd/
 
 CMD ["/bin/sh"]
 #./rfxcmd.py -d /dev/ttyUSB0 -s "0D1A00200000010103A100000000" -v
